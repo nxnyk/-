@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.bingoogolapple.photopicker.demo.activity.personinfoActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+            android:id="@+id/et_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px150"
+            app:content_widget="textview"
+            app:hint_txt=""
+            app:tag_txt="用户名" />
+
+        <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+            android:id="@+id/et_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px150"
+            app:content_txt="未设置"
+            app:content_widget="textview"
+            app:tag_txt="性别" />
+
+        <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+            android:id="@+id/et_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px150"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            app:content_txt="未设置"
+            app:content_widget="textview"
+            app:hint_txt=""
+            app:tag_txt="出生日期" />
+
+        <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+            android:id="@+id/et_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px150"
+            app:content_widget="textview"
+            app:hint_txt=""
+            app:tag_txt="手机" />
+
+        <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+            android:id="@+id/et_layout5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px150"
+            app:content_widget="textview"
+            app:hint_txt=""
+            app:tag_txt="邮箱" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

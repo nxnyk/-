@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="30dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hyit" />
+
+    <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+        android:id="@+id/asd1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150"
+        android:layout_marginTop="50dp"
+        app:content_widget="textview"
+        app:has_next_page="true"
+        app:tag_txt="个人信息">
+
+    </cn.bingoogolapple.photopicker.demo.Config.EditLayout>
+
+    <View style="@style/view_title"/>
+
+    <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+        android:id="@+id/asd2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150"
+        app:content_widget="textview"
+        app:has_next_page="true"
+        app:tag_txt="我的发布">
+
+    </cn.bingoogolapple.photopicker.demo.Config.EditLayout>
+    <View style="@style/view_title"/>
+
+    <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+        android:id="@+id/asd3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150"
+        app:content_widget="textview"
+        app:has_next_page="true"
+        app:tag_txt="设置">
+
+    </cn.bingoogolapple.photopicker.demo.Config.EditLayout>
+    <View style="@style/view_title"/>
+
+    <cn.bingoogolapple.photopicker.demo.Config.EditLayout
+        android:id="@+id/asd4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px150"
+        app:content_widget="textview"
+        app:has_next_page="true"
+        app:tag_txt="关于">
+
+    </cn.bingoogolapple.photopicker.demo.Config.EditLayout>
+</LinearLayout>
