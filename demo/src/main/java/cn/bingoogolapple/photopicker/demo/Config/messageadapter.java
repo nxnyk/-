@@ -20,6 +20,11 @@ public class messageadapter extends ArrayAdapter {
     Context mcontext;
     LayoutInflater layoutInflater;
 
+    static class ViewHolder
+    {
+        TextView messfbz;
+        TextView messnr;
+    }
     public messageadapter(Context context, int resoueceid, List<message> objects) {
         super(context, resoueceid, objects);
         this.Resoueceid = resoueceid;
@@ -29,20 +34,23 @@ public class messageadapter extends ArrayAdapter {
 
     public View getView(int position, View convertView, ViewGroup parent) {
         final int p = position;
-        View view = null;
         message mess = (message) getItem(position);
+        ViewHolder holder;
         if (convertView == null) {
-            view = layoutInflater.inflate(R.layout.messageitem, null);
-        } else {
-            view = convertView;
-
+            convertView = layoutInflater.inflate(R.layout.messageitem, null);
+            holder=new ViewHolder();
+            holder.messfbz=(TextView) convertView.findViewById(R.id.messagefrom);
+            holder.messnr=(TextView) convertView.findViewById(R.id.messagenr);
         }
-        TextView messfbz = (TextView) view.findViewById(R.id.messagefrom);
-        TextView messnr = (TextView) view.findViewById(R.id.messagenr);
+        else
+            {
+                holder=(ViewHolder) convertView.getTag();
+            }
 
-        messfbz.setText("用户" + mess.getLyz() + "给您留言:");
-        messnr.setText(mess.getLynr());
-        return view;
+
+        holder.messfbz.setText("用户" + mess.getLyz() + "给您留言:");
+        holder.messnr.setText(mess.getLynr());
+        return convertView;
     }
 }
 
